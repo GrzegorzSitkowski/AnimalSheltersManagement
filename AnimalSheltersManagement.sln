@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9377A8AD-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Domain", "AnimalShelterManagement\AnimalShelterManagement.Domain.csproj", "{E39218F0-4003-4D5B-B513-8D19486E64D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Application", "AnimalShelterManagement.Application\AnimalShelterManagement.Application.csproj", "{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{E39218F0-4003-4D5B-B513-8D19486E64D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E39218F0-4003-4D5B-B513-8D19486E64D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E39218F0-4003-4D5B-B513-8D19486E64D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BBA8D34C-ED3A-41AF-A379-BCD82BD0FCA5} = {C2A438BB-EA93-44E8-BF0F-602D4B16121D}
 		{E39218F0-4003-4D5B-B513-8D19486E64D3} = {9377A8AD-7589-4095-A376-D72C527ABBD1}
+		{0E5C0336-7FB4-4C88-B9A0-3CD587521D90} = {9377A8AD-7589-4095-A376-D72C527ABBD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F68DAA9B-57AF-425F-8E9D-4DBA3208368F}
