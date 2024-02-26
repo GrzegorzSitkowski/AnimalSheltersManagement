@@ -9,7 +9,7 @@ namespace AnimalSheltersManagement
 
             // Add services to the container.
             builder.Services.AddCors(options =>
-            options.AddPolicy(name: "MyAllowSpecificOriigns",
+            options.AddPolicy(name: "MyAllowSpecificOrigns",
             builder =>
             {
                 builder.AllowAnyOrigin();
