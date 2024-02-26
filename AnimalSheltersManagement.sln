@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalSheltersManagement", "AnimalSheltersManagement\AnimalSheltersManagement.csproj", "{BBA8D34C-ED3A-41AF-A379-BCD82BD0FCA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalSheltersManagement", "AnimalSheltersManagement\AnimalSheltersManagement.csproj", "{BBA8D34C-ED3A-41AF-A379-BCD82BD0FCA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C2A438BB-EA93-44E8-BF0F-602D4B16121D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +20,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBA8D34C-ED3A-41AF-A379-BCD82BD0FCA5} = {C2A438BB-EA93-44E8-BF0F-602D4B16121D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F68DAA9B-57AF-425F-8E9D-4DBA3208368F}
