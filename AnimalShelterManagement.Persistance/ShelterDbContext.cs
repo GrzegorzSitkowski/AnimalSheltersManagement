@@ -9,5 +9,9 @@ namespace AnimalShelterManagement.Persistance
 {
     public class ShelterDbContext : DbContext
     {
+        public ShelterDbContext(DbContextOptions<ShelterDbContext> options) : base(options)
+        {
+                
+        }
     }
 }
