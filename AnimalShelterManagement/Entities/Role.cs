@@ -9,6 +9,6 @@ namespace AnimalShelterManagement.Domain.Entities
     public class Role
     {
         public Guid Id { get; set; }
-        public User UserId { get; set; }
+        public ICollection<User>? Users { get; set; }
     }
 }
