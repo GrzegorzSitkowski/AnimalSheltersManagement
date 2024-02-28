@@ -15,6 +15,6 @@ namespace AnimalShelterManagement.Domain.Entities
         public string? Description { get; set; }
         public string? Details { get; set; }
         public Guid? ShelterId { get; set; }
-        public Shelter Shelter { get; set; }
+        public Shelter? Shelter { get; set; }
     }
 }
