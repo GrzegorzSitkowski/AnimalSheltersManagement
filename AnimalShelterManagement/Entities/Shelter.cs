@@ -1,4 +1,5 @@
-﻿using AnimalShelterManagement.Domain.ValueObjects;
+﻿using AnimalShelterManagement.Domain.Common;
+using AnimalShelterManagement.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterManagement.Domain.Entities
 {
-    public class Shelter
+    public class Shelter : AuditableEntity
     {
-        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
         public Address? ShelterAddress { get; set; }
