@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimalShelterManagement.Domain.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterManagement.Domain.Entities
 {
-    public class Role
+    public class Role : AuditableEntity
     {
-        public Guid Id { get; set; }
         public ICollection<User>? Users { get; set; }
     }
 }
