@@ -12,7 +12,7 @@ namespace AnimalShelterManagement.Domain.Entities
         public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
-        public Address ShelterAddress { get; set; }
+        public Address? ShelterAddress { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public ICollection<Pet>? Pets { get; set; }
