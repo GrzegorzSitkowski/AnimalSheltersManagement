@@ -9,17 +9,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{9377A8AD-7589-4095-A376-D72C527ABBD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Domain", "AnimalShelterManagement\AnimalShelterManagement.Domain.csproj", "{E39218F0-4003-4D5B-B513-8D19486E64D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalShelterManagement.Domain", "AnimalShelterManagement\AnimalShelterManagement.Domain.csproj", "{E39218F0-4003-4D5B-B513-8D19486E64D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Application", "AnimalShelterManagement.Application\AnimalShelterManagement.Application.csproj", "{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalShelterManagement.Application", "AnimalShelterManagement.Application\AnimalShelterManagement.Application.csproj", "{0E5C0336-7FB4-4C88-B9A0-3CD587521D90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Common", "AnimalShelterManagement.Common\AnimalShelterManagement.Common.csproj", "{C0313E13-4BFB-4990-852E-C224B40D1DE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalShelterManagement.Common", "AnimalShelterManagement.Common\AnimalShelterManagement.Common.csproj", "{C0313E13-4BFB-4990-852E-C224B40D1DE7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{1D5699AC-DCCD-4B5F-A3AB-FC537827C824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Infrastructure", "AnimalShelterManagement.Infrastructure\AnimalShelterManagement.Infrastructure.csproj", "{C0E1A9FE-9C0B-4285-BD75-B25B7612E0BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalShelterManagement.Infrastructure", "AnimalShelterManagement.Infrastructure\AnimalShelterManagement.Infrastructure.csproj", "{C0E1A9FE-9C0B-4285-BD75-B25B7612E0BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimalShelterManagement.Persistance", "AnimalShelterManagement.Persistance\AnimalShelterManagement.Persistance.csproj", "{00D3B0FD-B7D0-4776-B9BE-D350DEC383A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalShelterManagement.Persistance", "AnimalShelterManagement.Persistance\AnimalShelterManagement.Persistance.csproj", "{00D3B0FD-B7D0-4776-B9BE-D350DEC383A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
