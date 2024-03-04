@@ -21,6 +21,12 @@ namespace AnimalShelterManagement.Persistance
         public DbSet<Shelter> Shelters { get; set; }
         public DbSet<User> Users { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().OwnsOne(p => p.UserName);
+            modelBuilder.Entity<Shelter>().OwnsOne(p => p.ShelterAddress);
+        }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
             foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
