@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagement.Domain.Common;
+using AnimalShelterManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,11 @@ namespace AnimalShelterManagement.Persistance
         {
 
         }
+
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Shelter> Shelters { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
