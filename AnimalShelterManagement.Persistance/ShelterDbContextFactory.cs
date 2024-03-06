@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ShelterManagement.Persistance
 {
-    public class ShelterDbContextFactory : DesignTimeDbContextFactoryBase<ShelterDbContext>
+    /*public class ShelterDbContextFactory : DesignTimeDbContextFactoryBase<ShelterDbContext>
     {
         protected override ShelterDbContext CreateNewInstance(DbContextOptions<ShelterDbContext> options)
         {
             return new ShelterDbContext(options);
         }
-    }
+    }*/
 }

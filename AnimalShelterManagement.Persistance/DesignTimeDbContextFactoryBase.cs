@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace AnimalShelterManagement.Persistance
 {
-    public abstract class DesignTimeDbContextFactoryBase<TContext> :
+    /*public abstract class DesignTimeDbContextFactoryBase<TContext> :
       IDesignTimeDbContextFactory<TContext> where TContext : DbContext
     {
         private const string ConnectionStringName = "ShelterDatabase";
@@ -28,7 +29,7 @@ namespace AnimalShelterManagement.Persistance
             var configuration = new ConfigurationBuilder()
                 .SetBasePath(basePath)
                 .AddJsonFile("appsettings.json")
-                .AddJsonFile($"appsettings.Local.json", optional: true)
+                //.AddJsonFile($"appsettings.Local.json", optional: true)
                 .AddJsonFile($"appsettings.{environmentName}.json", optional: true)
                 .AddEnvironmentVariables()
                 .Build();
@@ -51,5 +52,5 @@ namespace AnimalShelterManagement.Persistance
 
             return CreateNewInstance(optionsBuilder.Options);
         }
-    }
+    }*/
 }

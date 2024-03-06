@@ -11,6 +11,7 @@ namespace AnimalShelterManagement.Persistance
 {
     public class ShelterDbContext : DbContext
     {
+        private string _connectionString = "Server=localhost\\SQLEXPRESS14;Database=ShelterDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
         public ShelterDbContext(DbContextOptions<ShelterDbContext> options) : base(options)
         {
 
@@ -53,6 +54,11 @@ namespace AnimalShelterManagement.Persistance
                 }
             }
             return base.SaveChangesAsync(cancellationToken);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(_connectionString);
         }
     }
 }
