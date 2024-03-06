@@ -27,6 +27,7 @@ namespace AnimalShelterManagement.Persistance
             modelBuilder.Entity<User>().OwnsOne(p => p.UserName);
             modelBuilder.Entity<Shelter>().OwnsOne(p => p.ShelterAddress);
 
+            modelBuilder.SeedData();
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
