@@ -24,8 +24,22 @@ namespace AnimalShelterManagement.Persistance
                     City = "New York"
                 });
                 u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirstName = "Peter", LastName = "Smith" });
-            }
-            );
+            });
+
+            modelBuilder.Entity<Shelter>(s =>
+            {
+                s.HasData(new Shelter()
+                {
+                    Id = new Guid(),
+                    StatusId = 1,
+                    Created = DateTime.Now,
+                    Name = "New York Shelter",
+                    Description = "Shelter for abbandon pets in New York.",
+                    Email = "shelterNY@mail.com",
+                    PhoneNumber = "123 456 789"
+                });
+                s.OwnsOne(s => s.ShelterAddress).HasData(new { ShelterId = 1, Street = "Street", City = "New York", PostalCode = "61-070" });
+            });
         }
     }
 }
