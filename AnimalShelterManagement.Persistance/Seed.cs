@@ -40,6 +40,10 @@ namespace AnimalShelterManagement.Persistance
                 });
                 s.OwnsOne(s => s.ShelterAddress).HasData(new { ShelterId = 1, Street = "Street", City = "New York", PostalCode = "61-070" });
             });
+
+            modelBuilder.Entity<Pet>().HasData(
+                new Pet() { Id = new Guid(), StatusId = 1, Created = DateTime.Now, Name = "Lupin", Age = 3, Description = "Good boy." },
+                new Pet() { Id = new Guid(), StatusId = 1, Created = DateTime.Now, Name = "Puffy", Age = 7, Description = "Healthy." });
         }
     }
 }
