@@ -1,3 +1,4 @@
+using AnimalShelterManagement.Persistance;
 
 namespace AnimalSheltersManagement
 {
@@ -14,13 +15,17 @@ namespace AnimalSheltersManagement
             {
                 builder.AllowAnyOrigin();
             }));
+
+            //builder.Services.AddInfrastructure(Configuration);
+            builder.Services.AddPersistance(builder.Configuration);
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddHealthChecks();
-
+            // Add services to the container.
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

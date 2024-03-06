@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagement.Domain.Common;
+using AnimalShelterManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,21 @@ namespace AnimalShelterManagement.Persistance
 {
     public class ShelterDbContext : DbContext
     {
+        private string _connectionString = "Server=localhost\\SQLEXPRESS14;Database=ShelterDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
         public ShelterDbContext(DbContextOptions<ShelterDbContext> options) : base(options)
         {
 
+        }
+
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Shelter> Shelters { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<User>().OwnsOne(p => p.UserName);
+            modelBuilder.Entity<Shelter>().OwnsOne(p => p.ShelterAddress);
         }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
@@ -41,6 +54,11 @@ namespace AnimalShelterManagement.Persistance
                 }
             }
             return base.SaveChangesAsync(cancellationToken);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(_connectionString);
         }
     }
 }
