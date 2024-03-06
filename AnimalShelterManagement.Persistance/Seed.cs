@@ -16,21 +16,21 @@ namespace AnimalShelterManagement.Persistance
             {
                 u.HasData(new User()
                 {
-                    Id = new Guid(),
+                    Id = Guid.NewGuid(),
                     StatusId = 1,
                     Created = DateTime.Now,
                     Email = "mail@example.com",
                     PhoneNumber = "123 456 789",
                     City = "New York"
                 });
-                u.OwnsOne(u => u.UserName).HasData(new { UserId = 1, FirstName = "Peter", LastName = "Smith" });
+                u.OwnsOne(u => u.UserName).HasData(new { UserId = Guid.NewGuid(), FirstName = "Peter", LastName = "Smith" });
             });
 
             modelBuilder.Entity<Shelter>(s =>
             {
                 s.HasData(new Shelter()
                 {
-                    Id = new Guid(),
+                    Id = Guid.NewGuid(),
                     StatusId = 1,
                     Created = DateTime.Now,
                     Name = "New York Shelter",
@@ -38,12 +38,11 @@ namespace AnimalShelterManagement.Persistance
                     Email = "shelterNY@mail.com",
                     PhoneNumber = "123 456 789"
                 });
-                s.OwnsOne(s => s.ShelterAddress).HasData(new { ShelterId = 1, Street = "Street", City = "New York", PostalCode = "61-070" });
+                s.OwnsOne(s => s.ShelterAddress).HasData(new { ShelterId = Guid.NewGuid(), Street = "Street", City = "New York", PostalCode = "61-070" });
             });
 
             modelBuilder.Entity<Pet>().HasData(
-                new Pet() { Id = new Guid(), StatusId = 1, Created = DateTime.Now, Name = "Lupin", Age = 3, Description = "Good boy." },
-                new Pet() { Id = new Guid(), StatusId = 1, Created = DateTime.Now, Name = "Puffy", Age = 7, Description = "Healthy." });
+                new Pet() { Id = Guid.NewGuid(), StatusId = 1, Created = DateTime.Now, Name = "Lupin", Age = 3, Description = "Good boy." });
         }
     }
 }
