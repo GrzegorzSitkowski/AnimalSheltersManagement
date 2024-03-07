@@ -24,8 +24,7 @@ namespace AnimalShelterManagement.Persistance
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().OwnsOne(p => p.UserName);
-            modelBuilder.Entity<Shelter>().OwnsOne(p => p.ShelterAddress);
+            modelBuilder.Entity<User>().OwnsOne(p => p.UserName);            
 
             modelBuilder.SeedData();       
         }
