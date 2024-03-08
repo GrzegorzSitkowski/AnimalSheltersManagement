@@ -1,4 +1,5 @@
-﻿using AnimalShelterManagement.Domain.Common;
+﻿using AnimalShelterManagement.Application.Interfaces;
+using AnimalShelterManagement.Domain.Common;
 using AnimalShelterManagement.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,9 +14,11 @@ namespace AnimalShelterManagement.Persistance
     public class ShelterDbContext : DbContext
     {
         private string _connectionString = "Server=localhost\\SQLEXPRESS14;Database=ShelterDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
-        public ShelterDbContext(DbContextOptions<ShelterDbContext> options) : base(options)
-        {
+        private readonly IDateTime _dateTime;
 
+        public ShelterDbContext(DbContextOptions<ShelterDbContext> options, IDateTime dateTime) : base(options)
+        {
+            _dateTime = dateTime;
         }
 
         public DbSet<Pet> Pets { get; set; }
@@ -38,17 +41,17 @@ namespace AnimalShelterManagement.Persistance
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedBy = string.Empty;
-                        entry.Entity.Created = DateTime.Now;
+                        entry.Entity.Created = _dateTime.Now;
                         entry.Entity.StatusId = 1;
                         break;
                     case EntityState.Modified:
                         entry.Entity.ModifiedBy = string.Empty;
-                        entry.Entity.Modified = DateTime.Now;
+                        entry.Entity.Modified = _dateTime.Now;
                         break;
                     case EntityState.Deleted:
                         entry.Entity.ModifiedBy = string.Empty;
-                        entry.Entity.Modified = DateTime.Now;
-                        entry.Entity.Inactivated = DateTime.Now;
+                        entry.Entity.Modified = _dateTime.Now;
+                        entry.Entity.Inactivated = _dateTime.Now;
                         entry.Entity.InactivatedBy = string.Empty;
                         entry.Entity.StatusId = 0;
                         entry.State = EntityState.Modified;
