@@ -1,4 +1,5 @@
 ﻿using AnimalShelterManagement.Application.Interfaces;
+using AnimalShelterManagement.Infrastructure.FileStore;
 using AnimalShelterManagement.Infrastructure.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,9 @@ namespace AnimalShelterManagement.Infrastructure
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<IDateTime, DateTimeService>();
+            services.AddTransient<IFileStore, FileStore.FileStore>();
+            services.AddTransient<IFileWrapper, FileWrapper>();
+            services.AddTransient<IDirectoryWrapper, DirectoryWrapper>();
             return services;
         }
     }
