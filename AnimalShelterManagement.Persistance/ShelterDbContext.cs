@@ -21,11 +21,6 @@ namespace AnimalShelterManagement.Persistance
             _dateTime = dateTime;
         }
 
-        public DbSet<Pet> Pets { get; set; }
-        public DbSet<Role> Roles { get; set; }
-        public DbSet<Shelter> Shelters { get; set; }
-        public DbSet<User> Users { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
