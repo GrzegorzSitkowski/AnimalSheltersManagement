@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterManagement.Persistance
 {
-    public class ShelterDbContext : DbContext
+    public class ShelterDbContext : DbContext, IShelterDbContext
     {
         private string _connectionString = "Server=localhost\\SQLEXPRESS14;Database=ShelterDatabase;Trusted_Connection=True;TrustServerCertificate=True;";
         private readonly IDateTime _dateTime;
@@ -20,6 +20,11 @@ namespace AnimalShelterManagement.Persistance
         {
             _dateTime = dateTime;
         }
+
+        public DbSet<Pet> Pets { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Shelter> Shelters { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
