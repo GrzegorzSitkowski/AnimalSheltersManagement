@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterManagement.Application.Shelters.Queries.GetShelterDetail
 {
-    internal class GetShelterDetailQuery
+    public  class GetShelterDetailQuery
     {
+        public Guid ShelterId { get; set; }
     }
 }
