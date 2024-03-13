@@ -8,6 +8,6 @@ namespace AnimalShelterManagement.Application.Shelters.Queries.GetShelters
 {
     public class SheltersVm
     {
-
+        ICollection<SheltersDto> Shelters { get; set; }
     }
 }
