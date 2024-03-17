@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalShelterManagement.Application.Pets.Queries.GetShelterDetail
 {
-    public class GetShelterDetailVm
+    public class PetDetailVm
     {
         public string? Name { get; set; }
         public string? Photos { get; set; }
