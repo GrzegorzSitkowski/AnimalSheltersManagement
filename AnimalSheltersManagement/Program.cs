@@ -1,3 +1,4 @@
+using AnimalShelterManagement.Application;
 using AnimalShelterManagement.Persistance;
 
 namespace AnimalSheltersManagement
@@ -17,8 +18,11 @@ namespace AnimalSheltersManagement
             }));
 
             //builder.Services.AddInfrastructure(Configuration);
+            builder.Services.AddApplication();
             builder.Services.AddPersistance(builder.Configuration);
             builder.Services.AddControllers();
+
+            //builder.Services.AddAutoMapper(typeof(Program));
 
 
             builder.Services.AddEndpointsApiExplorer();
