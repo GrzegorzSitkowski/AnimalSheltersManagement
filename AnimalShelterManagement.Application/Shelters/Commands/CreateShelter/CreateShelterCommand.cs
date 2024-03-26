@@ -1,4 +1,7 @@
-﻿using MediatR;
+﻿using AnimalShelterManagement.Application.Common.Mappings;
+using AnimalShelterManagement.Domain.Entities;
+using AutoMapper;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
