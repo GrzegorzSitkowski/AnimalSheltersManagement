@@ -1,17 +1,15 @@
-﻿using AnimalShelterManagement.Application.Common.Mappings;
-using AnimalShelterManagement.Domain.Entities;
-using AutoMapper;
-using MediatR;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalShelterManagement.Application.Shelters.Commands.CreateShelter
+namespace AnimalShelterManagement.Application.Shelters.Commands.UpdateShelter
 {
-    public class CreateShelterCommand : IRequest<Guid>
+    public class UpdateShelterCommand : IRequest
     {
+        public Guid Id { get; set; }
         public string? Name { get; set; }
         public string? Description { get; set; }
         public string City { get; set; }

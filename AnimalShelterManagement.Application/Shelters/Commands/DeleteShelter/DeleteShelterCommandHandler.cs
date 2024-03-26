@@ -28,5 +28,10 @@ namespace AnimalShelterManagement.Application.Shelters.Commands.DeleteShelter
 
             return Unit.Value;
         }
+
+        Task IRequestHandler<DeleteShelterCommand>.Handle(DeleteShelterCommand request, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AnimalShelterManagement.Application.Interfaces;
 using AnimalShelterManagement.Domain.Entities;
+using AutoMapper;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace AnimalShelterManagement.Application.Shelters.Commands.CreateShelter
 
         public CreateShelterCommandHandler(IShelterDbContext shelterDbContext)
         {
-            _context = shelterDbContext;
+            _context = shelterDbContext; 
         }
 
         public async Task<Guid> Handle(CreateShelterCommand request, CancellationToken cancellationToken)
